@@ -1,0 +1,70 @@
+.container {
+  padding: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  .filter_bar {
+    border: 2px solid #fff;
+    border-radius: 45px;
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .filter_block {
+      box-sizing: border-box;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      height: 33%;
+    }
+    div + div {
+      border-top: 2px solid #fff;
+    }
+    .filter_items {
+      visibility: hidden;
+      overflow: hidden;
+      position: absolute;
+      max-height: 0px;
+      transition: 0.2s all ease-in-out;
+      border: 2px solid #fff;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translate3d(200px, 0, 0);
+      &.active {
+        visibility: visible;
+        position: absolute;
+        padding: 5px;
+        max-height: 100px;
+      }
+      .filter_item {
+        box-sizing: border-box;
+        width: 120%;
+        text-align: center;
+        transition: 0.3s all ease;
+        padding: 5px;
+        &.active {
+          color: red;
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+  .content_items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 275px);
+    justify-content: center;
+    grid-column-gap: 4%;
+    grid-row-gap: 10%;
+    width: 85%;
+    .items_block {
+      background-color: red;
+      width: 300px;
+      height: 200px;
+    }
+  }
+}

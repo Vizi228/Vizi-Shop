@@ -1,0 +1,104 @@
+.slider {
+  color: #fff;
+  position: absolute;
+  top: 25px;
+  left: 133px;
+  list-style: none;
+  .wrapper {
+    box-sizing: border-box;
+    width: 475px;
+    display: grid;
+    overflow: hidden;
+    position: relative;
+    grid-column-gap: 15px;
+    grid-template-columns: repeat(6, 475px);
+    background-color: #000;
+    height: 325px;
+    border-radius: 15px;
+    transition: 0.7s all ease;
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      font-weight: 600;
+      align-items: center;
+      span {
+        position: absolute;
+        top: -10px;
+        left: 20%;
+        font-size: 14px;
+        color: red;
+        text-decoration: line-through #fff;
+      }
+      button {
+        border: 1px solid #fff;
+        background-color: #000;
+        border-radius: 15px;
+        color: #fff;
+        font-weight: 600;
+        padding: 5px 10px 5px 10px;
+        cursor: pointer;
+        transition: 0.5s all ease;
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+    img {
+      border-radius: 15px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .dots {
+      list-style: none;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      bottom: 0;
+      left: 150px;
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .slider {
+    top: 75px;
+  }
+}
+@media (max-width: 1152px) {
+  .wrapper {
+    width: 334px !important;
+    height: 250px !important;
+    img {
+      width: 100%;
+    }
+    .dots {
+      left: 75px !important;
+    }
+  }
+}
+@media (max-width: 910px) {
+  .slider {
+    top: 10px;
+    left: 70px !important;
+  }
+  .wrapper {
+    width: 300px !important;
+    height: 220px !important;
+    img {
+      width: 100%;
+    }
+    .dots {
+      left: 50px !important;
+      bottom: -10px !important;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .slider {
+    display: none;
+  }
+}
